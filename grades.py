@@ -9,7 +9,7 @@
 def calculate_averages(filename):
     students = []
 
-    # Open and read the input file
+    # Open/scan input file input.txt
     with open(filename, "r") as file:
         for line in file:
             parts = line.strip().split()
@@ -18,13 +18,13 @@ def calculate_averages(filename):
             average = sum(scores) / len(scores)
             students.append((name, average))
 
-    # Sort by average in descending order
+    # Sort in descending order
     students.sort(key=lambda x: x[1], reverse=True)
 
-    # Print results
+    # results line by lime
     for name, avg in students:
         print(f"{name} {avg:.2f}")
 
 
-# Run the program using "input.txt"
+# Run 
 calculate_averages("input.txt")
